@@ -1,0 +1,44 @@
+nav {
+	background-color: rgba(0,0,0,.6);
+}
+
+.main-img {
+    background-image: url('../img/camp.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.setto{
+    background-image: url('../img/camp.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+   }
+
+.navbar-brand {
+	font-family: 'Permanent Marker', sans-serif;
+	font-size: 30px;
+	color: white;
+}
+
+.nav-item {
+	margin-right: 20px;
+}
+
+.nav-link {
+	color: white;
+	font-weight: 700;
+	font-size: 16px;
+}
+
+h3 {
+	font-weight: 1000;
+}
+
+p {
+	width: 60%;
+}
+
