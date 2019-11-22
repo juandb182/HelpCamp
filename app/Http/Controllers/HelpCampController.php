@@ -31,8 +31,7 @@ class HelpCampController extends Controller
      public function pdff(Request $request,$slug)
      {
 
-        //$servicio = Servicio::all();
-        //$servicio = Servicio::slug();
+
 
         $user = Auth::user();
         $ser = DB::table('servicios')->where('slug',$slug)->first();
@@ -224,12 +223,7 @@ class HelpCampController extends Controller
     }
         $servicio->save();
         return redirect()->route('servicio.index');
-        //en este caso si no se coloca el parametro dara un erro
-        //enviarle un objeto el cual ahorita es trainer
-        //session data
-        //con with se va a enviar datos a la vista
-        //se le va a pasar una variable status q va a guardar el status y el mensanje
-        // return redirect()->route('crud.show',[$servicio])->with('status','Perfil actualizado correctamente.');
+
 
     }
 
@@ -244,7 +238,6 @@ class HelpCampController extends Controller
         $file_path = public_path().'/img/'.$servicio->imagen;
         \File::delete($file_path);
         $servicio->delete();
-        //return 'El usuario'.$servicio->name.'se ha eliminado con exito';
         return redirect()->route('servicio.index');
     }
 }
