@@ -106,9 +106,9 @@ class HelpCampController extends Controller
 
     public function index(Request $request)
     {
-      //$request->user()->authorizeRoles('admin');
+
       $servicio = Servicio::all();
-      //compact genera un array con toda la informacion que le damos
+
       return view('servicio.index',compact('servicio'));
     }
 
@@ -195,8 +195,7 @@ class HelpCampController extends Controller
      */
     public function edit(Servicio $servicio)
     {
-       // $servicio = Servicio::all();
-        //$servicio = Servicio::find($servicio);
+
         return view('servicio.edit',compact('servicio'));
     }
 
