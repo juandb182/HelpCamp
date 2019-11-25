@@ -36,8 +36,6 @@ class HelpCampController extends Controller
         $user = Auth::user();
         $ser = DB::table('servicios')->where('slug',$slug)->first();
 
-
-
         $servicio = DB::table('servicios')->where('slug',$slug);
         $pdf = PDF::loadview('servicio.pdf',compact('user'),compact('ser'));
         //$pdf->download('servicio.pdf');
@@ -54,9 +52,7 @@ class HelpCampController extends Controller
 
 
 
-        $mail = new PHPMailer();
-
-
+    $mail = new PHPMailer();
     $mail->IsHTML(true);
     $mail->IsSMTP();
     $mail->SMTPAuth = true;
@@ -97,13 +93,6 @@ class HelpCampController extends Controller
         return view('servicio.verUser',compact('user'));
     }
 
-
-
-
-
-
-
-
     public function index(Request $request)
     {
 
@@ -130,10 +119,6 @@ class HelpCampController extends Controller
      */
     public function store(Request $request)
     {
-
-        //se crea una variable que se le va a asignar la instancia del modelo "servicio"
-
-
         if ($request->hasFile('imagen')) {
             $file = $request->file('imagen');
             $name = time().$file->getClientOriginalName();
